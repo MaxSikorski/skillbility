@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillbility - The App Store for Robots</title>
+    <meta name="description" content="Discover and download robot skills instantly. The marketplace for robot abilities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing-styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Skillbility</span>
+            </div>
+            <div class="nav-links">
+                <a href="#discover">Discover</a>
+                <a href="#developers">Developers</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Skillbility</h1>
+            <p class="hero-subtitle">The App Store for Robots</p>
+            <p class="hero-description">Download robot skills like apps. Browse thousands of pre-trained abilities and deploy them instantly to your robot.</p>
+            <div class="hero-cta">
+                <a href="index.html" class="btn-primary">Enter App Store</a>
+                <a href="#newsletter" class="btn-secondary">Join the Waitlist</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="app-preview">
+                <div class="preview-header">
+                    <div class="preview-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="preview-content">
+                    <div class="skill-card-preview">
+                        <div class="skill-icon">🤖</div>
+                        <h3>Object Manipulation</h3>
+                        <div class="skill-rating">★★★★★</div>
+                        <p class="skill-category">Productivity</p>
+                        <button class="btn-get">GET</button>
+                    </div>
+                    <div class="skill-card-preview">
+                        <div class="skill-icon">🎯</div>
+                        <h3>Precision Navigation</h3>
+                        <div class="skill-rating">★★★★☆</div>
+                        <p class="skill-category">Tools</p>
+                        <button class="btn-get">GET</button>
+                    </div>
+                    <div class="skill-card-preview">
+                        <div class="skill-icon">⚾</div>
+                        <h3>Baseball Swing</h3>
+                        <div class="skill-rating">★★★★★</div>
+                        <p class="skill-category">Sports</p>
+                        <button class="btn-get">GET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="discover">
+        <div class="container">
+            <h2 class="section-title">Browse. Download. Deploy.</h2>
+            <p class="section-subtitle">Everything your robot needs, in one place.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 22V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.27 6.96L12 12.01l8.73-5.05" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Thousands of Skills</h3>
+                    <p>Pre-trained models for every task imaginable. From industrial automation to entertainment.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Instant Deployment</h3>
+                    <p>One-click installation. Download a skill and deploy it to your robot in seconds.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Community Driven</h3>
+                    <p>Share your custom skills with the world. Learn from roboticists globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Browse the Marketplace</h3>
+                    <p>Explore skills organized by category, from manipulation to navigation to entertainment.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Download Skills</h3>
+                    <p>Select the abilities your robot needs and download them instantly.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Deploy to Robot</h3>
+                    <p>Upload skills to your robot with one click. Start using new abilities immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Showcase -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Popular Categories</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="category-icon">🏭</div>
+                    <span>Industrial</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🎮</div>
+                    <span>Entertainment</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🏥</div>
+                    <span>Healthcare</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🏠</div>
+                    <span>Home Automation</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">📦</div>
+                    <span>Logistics</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🔬</div>
+                    <span>Research</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Robots Section -->
+    <section class="supported-robots">
+        <div class="container">
+            <h2 class="section-title">Works With Your Robot</h2>
+            <p class="section-subtitle">Supporting the leading humanoid and robotic platforms</p>
+            
+            <div class="robots-grid">
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>Unitree G1</h3>
+                    <p class="robot-type">Humanoid</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>Unitree H1</h3>
+                    <p class="robot-type">Humanoid</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>Tesla Optimus</h3>
+                    <p class="robot-type">Humanoid</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>Figure 03</h3>
+                    <p class="robot-type">Humanoid</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>1X Neo</h3>
+                    <p class="robot-type">Humanoid</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>Xpeng Iron</h3>
+                    <p class="robot-type">Humanoid</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>K Scale Labs: K-Bot</h3>
+                    <p class="robot-type">Humanoid</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>K Scale Labs: Z-Bot</h3>
+                    <p class="robot-type">Humanoid</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>AgiBot X1</h3>
+                    <p class="robot-type">Humanoid</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🌟</div>
+                    <h3>R2-D2</h3>
+                    <p class="robot-type">Custom Build</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🎭</div>
+                    <h3>C-3PO</h3>
+                    <p class="robot-type">Custom Build</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🐻</div>
+                    <h3>Chewbacca</h3>
+                    <p class="robot-type">Custom Build</p>
+                </div>
+                <div class="robot-card">
+                    <div class="robot-icon">🦾</div>
+                    <h3>Robotic Arms</h3>
+                    <p class="robot-type">Open Source</p>
+                </div>
+            </div>
+            
+            <div class="robots-cta">
+                <p>Don't see your robot? <a href="#waitlist">Request support</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developers Section -->
+    <section class="developers" id="developers">
+        <div class="container">
+            <div class="developers-content">
+                <h2>For Developers</h2>
+                <p>Create and monetize robot skills. Reach thousands of roboticists worldwide.</p>
+                <ul class="developers-benefits">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Easy SDK integration
+                    </li>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Revenue sharing model
+                    </li>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Analytics and insights
+                    </li>
+                </ul>
+                <a href="#newsletter" class="btn-secondary">Stay Updated</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay in the Loop</h2>
+                <p>Be among the first to access Skillbility when we launch. Get updates on new skills, platform features, and robotics insights delivered to your inbox.</p>
+                <form class="newsletter-form" action="https://formspree.io/f/meovqggr" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Join Waitlist</button>
+                </form>
+                <p class="newsletter-note">Launching Q2 2025. No spam, ever.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Skillbility
+                    </div>
+                    <p>The App Store for Robots</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#discover">Discover</a>
+                        <a href="#developers">For Developers</a>
+                        <a href="#about">About</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#docs">Documentation</a>
+                        <a href="#support">Support</a>
+                        <a href="#blog">Blog</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#privacy">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Skillbility. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="landing-script.js"></script>
+</body>
+</html>
