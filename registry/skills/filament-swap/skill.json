@@ -1,0 +1,35 @@
+{
+  "manifest_version": "0.1",
+  "id": "filament-swap",
+  "name": "Filament Swap",
+  "version": "1.0.0",
+  "description": "One-command filament loading and unloading with automatic nozzle heating and a clean purge.",
+  "long_description": "Adds `LOAD_FILAMENT` and `UNLOAD_FILAMENT` commands to your printer. Heats the nozzle to your material's temp only if it isn't hot enough already, feeds or retracts at sensible speeds, and purges a short length after loading so your next print starts clean. Override the temp per-swap with `LOAD_FILAMENT TEMP=240`.",
+  "icon": "🧵",
+  "platform": "klipper",
+  "runtime": { "type": "klipper-macro", "min_klipper": "0.11.0" },
+  "author": { "name": "Skillbility", "url": "https://github.com/MaxSikorski/skillbility" },
+  "license": "MIT",
+  "compatibility": {
+    "printers": ["*"],
+    "kinematics": ["cartesian", "corexy", "delta"],
+    "requires_sections": ["extruder"]
+  },
+  "variables": [
+    { "name": "load_temp", "default": 220, "unit": "C", "description": "Default nozzle temp for loading/unloading" },
+    { "name": "load_length", "default": 50, "unit": "mm", "description": "Fast-feed distance from gears toward the nozzle" },
+    { "name": "purge_length", "default": 25, "unit": "mm", "description": "Slow purge after loading" },
+    { "name": "unload_length", "default": 60, "unit": "mm", "description": "Retract distance when unloading" },
+    { "name": "speed_slow", "default": 300, "unit": "mm/min", "description": "Purge / near-nozzle speed" },
+    { "name": "speed_fast", "default": 1200, "unit": "mm/min", "description": "Bulk feed speed" }
+  ],
+  "files": [
+    { "path": "filament-swap.cfg", "dest": "filament-swap.cfg" }
+  ],
+  "safety": {
+    "risk_level": "medium",
+    "notes": "Heats the hotend and extrudes. Keep hands clear of the nozzle; run only with filament path accessible."
+  },
+  "categories": ["filament", "quality-of-life"],
+  "tags": ["load", "unload", "m600", "swap", "purge"]
+}
