@@ -2,461 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skillbility - Robot Skills Store</title>
-    <meta name="description" content="Browse and download robot skills instantly">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Skillbility — Skills for the machines you own</title>
+    <meta name="description" content="An open registry of skills for your machines — starting with Klipper 3D printers. Install abilities like apps, with honest risk ratings.">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2L2 7l10 5 10-5-10-5z' fill='none' stroke='%23888' stroke-width='2' stroke-linejoin='round'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Navigation -->
-    <header class="app-header">
-        <nav class="app-nav">
-            <a href="landing.html" class="nav-back">← Home</a>
-            <div class="nav-search">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <circle cx="11" cy="11" r="8" stroke="#8e8e93" stroke-width="2"/>
-                    <path d="M21 21L16.65 16.65" stroke="#8e8e93" stroke-width="2" stroke-linecap="round"/>
+<body data-theme="dark">
+
+    <nav class="header-nav">
+        <a href="index.html" class="logo" id="logo-refresh" aria-label="Skillbility home">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+            <span>Skillbility</span>
+        </a>
+        <div class="nav-right">
+            <a href="landing.html" class="nav-link">About</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                 </svg>
-                <input type="text" placeholder="Skills, categories, or keywords" id="search">
-            </div>
-            <a href="account.html" class="nav-account">Account</a>
-        </nav>
-    </header>
+            </button>
+        </div>
+    </nav>
 
-    <main class="app-main">
-        <!-- Featured Section -->
-        <section class="featured-today">
-            <div class="section-header">
-                <p class="section-eyebrow">FEATURED</p>
-                <h1 class="section-title">Today's Skills</h1>
-            </div>
-            
-            <div class="featured-large">
-                <div class="featured-card-large">
-                    <div class="featured-info">
-                        <p class="featured-label">SKILL OF THE DAY</p>
-                        <h2>K-Pop Dance Master</h2>
-                        <p class="featured-description">Learn trending choreography and perform like a pro</p>
-                        <button class="btn-download">GET</button>
-                    </div>
-                    <div class="featured-icon-large">💃</div>
-                </div>
-            </div>
-
-            <div class="featured-grid">
-                <div class="featured-card-small">
-                    <div class="featured-icon-small">🏀</div>
-                    <div>
-                        <p class="featured-mini-label">NEW SKILL</p>
-                        <h3>Basketball Shot</h3>
-                        <p class="featured-mini-desc">Perfect your free throw</p>
-                    </div>
-                </div>
-                <div class="featured-card-small">
-                    <div class="featured-icon-small">🥋</div>
-                    <div>
-                        <p class="featured-mini-label">TRENDING</p>
-                        <h3>Kung Fu Master</h3>
-                        <p class="featured-mini-desc">Martial arts techniques</p>
-                    </div>
-                </div>
-                <div class="featured-card-small">
-                    <div class="featured-icon-small">🍳</div>
-                    <div>
-                        <p class="featured-mini-label">POPULAR</p>
-                        <h3>Mac 'n Cheese Chef</h3>
-                        <p class="featured-mini-desc">Cook perfect comfort food</p>
-                    </div>
-                </div>
+    <main>
+        <section class="hero">
+            <p class="section-label hero-label">Open skill registry · v0.1</p>
+            <h1 class="hero-title"><span class="muted">Install skills on your machines like</span> apps on your phone.</h1>
+            <p class="hero-subtitle">An open registry of abilities for the robots you actually own — starting with the Klipper 3D printer on your bench. Every skill is open source, versioned, and risk-rated before it touches your hardware.</p>
+            <div class="hero-cta">
+                <a href="#catalog" class="btn primary-btn">Browse skills</a>
+                <a href="#connect" class="btn secondary-btn">Connect a printer</a>
             </div>
         </section>
 
-        <!-- Entertainment Section -->
-        <section class="category-section">
-            <div class="section-header-inline">
-                <h2>Entertainment</h2>
-                <a href="#" class="see-all">See All</a>
-            </div>
-            <div class="apps-row">
-                <div class="app-card">
-                    <div class="app-icon">💃</div>
-                    <h3 class="app-name">K-Pop Dance</h3>
-                    <p class="app-subtitle">Learn trending moves</p>
-                    <button class="btn-get">GET</button>
+        <section class="connect" id="connect">
+            <div class="connect-card">
+                <p class="section-label">Connect your printer — one time</p>
+                <p class="connect-desc">Run this on your printer's host (the Pi running Klipper). It downloads the Skillbility installer; nothing changes on your printer until you choose to install a skill.</p>
+                <div class="code-block code-row">
+                    <code id="connect-cmd">curl -fsSL https://raw.githubusercontent.com/MaxSikorski/skillbility/main/installer/skillbility.py -o ~/skillbility.py &amp;&amp; python3 ~/skillbility.py list</code>
+                    <button class="copy-btn" data-copy="connect-cmd" aria-label="Copy command">Copy</button>
                 </div>
-                <div class="app-card">
-                    <div class="app-icon">🕺</div>
-                    <h3 class="app-name">Swing Dancing</h3>
-                    <p class="app-subtitle">Classic ballroom</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🎸</div>
-                    <h3 class="app-name">Guitar Player</h3>
-                    <p class="app-subtitle">Strum chords</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🎤</div>
-                    <h3 class="app-name">Karaoke Singer</h3>
-                    <p class="app-subtitle">Vocal performance</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🎭</div>
-                    <h3 class="app-name">Theater Actor</h3>
-                    <p class="app-subtitle">Dramatic arts</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🎪</div>
-                    <h3 class="app-name">Juggling Pro</h3>
-                    <p class="app-subtitle">Circus skills</p>
-                    <button class="btn-get">GET</button>
-                </div>
+                <p class="connect-note">This command goes live once the registry is published. Until then, you're previewing the real catalog locally.</p>
             </div>
         </section>
 
-        <!-- Sports & Fitness Section -->
-        <section class="category-section">
-            <div class="section-header-inline">
-                <h2>Sports & Fitness</h2>
-                <a href="#" class="see-all">See All</a>
+        <section class="catalog" id="catalog">
+            <div class="tabs" role="tablist" aria-label="Platforms">
+                <button class="tab" role="tab" aria-selected="true">3D Printers · Klipper</button>
+                <button class="tab" role="tab" aria-selected="false" disabled>Robot Arms</button>
+                <button class="tab" role="tab" aria-selected="false" disabled>Droid Builds</button>
+                <button class="tab" role="tab" aria-selected="false" disabled>Open Humanoids</button>
             </div>
-            <div class="apps-row">
-                <div class="app-card">
-                    <div class="app-icon">🏀</div>
-                    <h3 class="app-name">Basketball Shot</h3>
-                    <p class="app-subtitle">Free throw master</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">⚽</div>
-                    <h3 class="app-name">Soccer Dribbler</h3>
-                    <p class="app-subtitle">Ball control</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🏋️</div>
-                    <h3 class="app-name">Weightlifting</h3>
-                    <p class="app-subtitle">Strength training</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🧘</div>
-                    <h3 class="app-name">Yoga Master</h3>
-                    <p class="app-subtitle">Poses & balance</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">⚾</div>
-                    <h3 class="app-name">Baseball Swing</h3>
-                    <p class="app-subtitle">Home run hitter</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🏊</div>
-                    <h3 class="app-name">Swimming Pro</h3>
-                    <p class="app-subtitle">All strokes</p>
-                    <button class="btn-get">GET</button>
-                </div>
-            </div>
+            <p class="statusline" id="statusline">Loading catalog…</p>
+            <div class="grid" id="grid" aria-live="polite"></div>
         </section>
-
-        <!-- Martial Arts Section -->
-        <section class="category-section">
-            <div class="section-header-inline">
-                <h2>Martial Arts</h2>
-                <a href="#" class="see-all">See All</a>
-            </div>
-            <div class="apps-row">
-                <div class="app-card">
-                    <div class="app-icon">🥋</div>
-                    <h3 class="app-name">Kung Fu</h3>
-                    <p class="app-subtitle">Chinese martial arts</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🥊</div>
-                    <h3 class="app-name">Boxing Trainer</h3>
-                    <p class="app-subtitle">Punch combos</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🥷</div>
-                    <h3 class="app-name">Karate Master</h3>
-                    <p class="app-subtitle">Traditional katas</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🤼</div>
-                    <h3 class="app-name">Judo Throws</h3>
-                    <p class="app-subtitle">Grappling techniques</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🗡️</div>
-                    <h3 class="app-name">Sword Fighting</h3>
-                    <p class="app-subtitle">Blade mastery</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🏹</div>
-                    <h3 class="app-name">Archery</h3>
-                    <p class="app-subtitle">Precision shooting</p>
-                    <button class="btn-get">GET</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Home & Living Section -->
-        <section class="category-section">
-            <div class="section-header-inline">
-                <h2>Home & Living</h2>
-                <a href="#" class="see-all">See All</a>
-            </div>
-            <div class="apps-row">
-                <div class="app-card">
-                    <div class="app-icon">👕</div>
-                    <h3 class="app-name">Laundry Folder</h3>
-                    <p class="app-subtitle">Perfect folds</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🧹</div>
-                    <h3 class="app-name">House Cleaner</h3>
-                    <p class="app-subtitle">Spotless floors</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🧸</div>
-                    <h3 class="app-name">Toy Organizer</h3>
-                    <p class="app-subtitle">Pick up after kids</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🐕</div>
-                    <h3 class="app-name">Dog Walker</h3>
-                    <p class="app-subtitle">Pet care</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🌱</div>
-                    <h3 class="app-name">Plant Waterer</h3>
-                    <p class="app-subtitle">Garden care</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🛏️</div>
-                    <h3 class="app-name">Bed Maker</h3>
-                    <p class="app-subtitle">Hospital corners</p>
-                    <button class="btn-get">GET</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cooking Section -->
-        <section class="category-section">
-            <div class="section-header-inline">
-                <h2>Cooking</h2>
-                <a href="#" class="see-all">See All</a>
-            </div>
-            <div class="apps-row">
-                <div class="app-card">
-                    <div class="app-icon">🧀</div>
-                    <h3 class="app-name">Mac 'n Cheese</h3>
-                    <p class="app-subtitle">Comfort food</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🍕</div>
-                    <h3 class="app-name">Pizza Maker</h3>
-                    <p class="app-subtitle">Perfect pies</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🍳</div>
-                    <h3 class="app-name">Breakfast Chef</h3>
-                    <p class="app-subtitle">Eggs & more</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🍰</div>
-                    <h3 class="app-name">Pastry Baker</h3>
-                    <p class="app-subtitle">Desserts</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🍜</div>
-                    <h3 class="app-name">Ramen Master</h3>
-                    <p class="app-subtitle">Authentic noodles</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🥗</div>
-                    <h3 class="app-name">Salad Tosser</h3>
-                    <p class="app-subtitle">Fresh & healthy</p>
-                    <button class="btn-get">GET</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Automotive Section -->
-        <section class="category-section">
-            <div class="section-header-inline">
-                <h2>Automotive</h2>
-                <a href="#" class="see-all">See All</a>
-            </div>
-            <div class="apps-row">
-                <div class="app-card">
-                    <div class="app-icon">🔧</div>
-                    <h3 class="app-name">Car Mechanic</h3>
-                    <p class="app-subtitle">Engine repairs</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🛞</div>
-                    <h3 class="app-name">Tire Changer</h3>
-                    <p class="app-subtitle">Quick swaps</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🚗</div>
-                    <h3 class="app-name">Car Washer</h3>
-                    <p class="app-subtitle">Detailing pro</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🔋</div>
-                    <h3 class="app-name">Battery Expert</h3>
-                    <p class="app-subtitle">Jump starts</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">💨</div>
-                    <h3 class="app-name">Air Filter Pro</h3>
-                    <p class="app-subtitle">Maintenance</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🛠️</div>
-                    <h3 class="app-name">Oil Changer</h3>
-                    <p class="app-subtitle">Regular service</p>
-                    <button class="btn-get">GET</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Industrial Section -->
-        <section class="category-section">
-            <div class="section-header-inline">
-                <h2>Industrial & Manufacturing</h2>
-                <a href="#" class="see-all">See All</a>
-            </div>
-            <div class="apps-row">
-                <div class="app-card">
-                    <div class="app-icon">📦</div>
-                    <h3 class="app-name">Box Packer</h3>
-                    <p class="app-subtitle">Efficient packing</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🏭</div>
-                    <h3 class="app-name">Assembly Line</h3>
-                    <p class="app-subtitle">Production work</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🔩</div>
-                    <h3 class="app-name">Bolt Tightener</h3>
-                    <p class="app-subtitle">Precision torque</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">📊</div>
-                    <h3 class="app-name">Quality Control</h3>
-                    <p class="app-subtitle">Inspection</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🚚</div>
-                    <h3 class="app-name">Warehouse Pro</h3>
-                    <p class="app-subtitle">Logistics</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">⚙️</div>
-                    <h3 class="app-name">Machine Operator</h3>
-                    <p class="app-subtitle">Equipment control</p>
-                    <button class="btn-get">GET</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Art & Creativity Section -->
-        <section class="category-section">
-            <div class="section-header-inline">
-                <h2>Art & Creativity</h2>
-                <a href="#" class="see-all">See All</a>
-            </div>
-            <div class="apps-row">
-                <div class="app-card">
-                    <div class="app-icon">🎨</div>
-                    <h3 class="app-name">Painter</h3>
-                    <p class="app-subtitle">Canvas art</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">✏️</div>
-                    <h3 class="app-name">Sketch Artist</h3>
-                    <p class="app-subtitle">Drawing skills</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🖌️</div>
-                    <h3 class="app-name">Calligrapher</h3>
-                    <p class="app-subtitle">Beautiful writing</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🗿</div>
-                    <h3 class="app-name">Sculptor</h3>
-                    <p class="app-subtitle">3D art forms</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">📸</div>
-                    <h3 class="app-name">Photographer</h3>
-                    <p class="app-subtitle">Perfect shots</p>
-                    <button class="btn-get">GET</button>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🎬</div>
-                    <h3 class="app-name">Videographer</h3>
-                    <p class="app-subtitle">Video capture</p>
-                    <button class="btn-get">GET</button>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <footer class="app-footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="landing.html">About Skillbility</a>
-                <a href="#">For Developers</a>
-                <a href="#">Support</a>
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-            </div>
-            <p class="footer-copyright">© 2025 Skillbility. All rights reserved.</p>
-        </div>
+    <footer class="footer">
+        <p>Every skill keeps its author's license. Soon you'll publish your own by opening a pull request against the registry.</p>
+        <p>© 2026 Skillbility</p>
     </footer>
 
+    <!-- GSAP vendored locally so animations work offline; the page degrades gracefully if it's missing. -->
+    <script src="lib/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
