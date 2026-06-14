@@ -1,0 +1,142 @@
+{
+  "registry_version": "0.1",
+  "generated_at": "2026-06-14T20:37:12+00:00",
+  "skill_count": 3,
+  "skills": [
+    {
+      "id": "filament-swap",
+      "name": "Filament Swap",
+      "version": "1.0.0",
+      "description": "One-command filament loading and unloading with automatic nozzle heating and a clean purge.",
+      "icon": "\ud83e\uddf5",
+      "platform": "klipper",
+      "author": {
+        "name": "Skillbility",
+        "url": "https://github.com/MaxSikorski/skillbility"
+      },
+      "license": "MIT",
+      "categories": [
+        "filament",
+        "quality-of-life"
+      ],
+      "tags": [
+        "load",
+        "unload",
+        "m600",
+        "swap",
+        "purge"
+      ],
+      "variables": [
+        {
+          "name": "load_temp",
+          "default": 220,
+          "unit": "C",
+          "description": "Default nozzle temp for loading/unloading"
+        },
+        {
+          "name": "load_length",
+          "default": 50,
+          "unit": "mm",
+          "description": "Fast-feed distance from gears toward the nozzle"
+        },
+        {
+          "name": "purge_length",
+          "default": 25,
+          "unit": "mm",
+          "description": "Slow purge after loading"
+        },
+        {
+          "name": "unload_length",
+          "default": 60,
+          "unit": "mm",
+          "description": "Retract distance when unloading"
+        },
+        {
+          "name": "speed_slow",
+          "default": 300,
+          "unit": "mm/min",
+          "description": "Purge / near-nozzle speed"
+        },
+        {
+          "name": "speed_fast",
+          "default": 1200,
+          "unit": "mm/min",
+          "description": "Bulk feed speed"
+        }
+      ],
+      "risk_level": "medium",
+      "path": "registry/skills/filament-swap"
+    },
+    {
+      "id": "maintenance-park",
+      "name": "Maintenance Park",
+      "version": "1.0.0",
+      "description": "Moves the toolhead front-and-center at a comfortable height for nozzle swaps, cleaning, and inspection.",
+      "icon": "\ud83d\udd27",
+      "platform": "klipper",
+      "author": {
+        "name": "Skillbility",
+        "url": "https://github.com/MaxSikorski/skillbility"
+      },
+      "license": "MIT",
+      "categories": [
+        "maintenance",
+        "quality-of-life"
+      ],
+      "tags": [
+        "park",
+        "nozzle",
+        "service",
+        "home"
+      ],
+      "variables": [
+        {
+          "name": "park_z",
+          "default": 100,
+          "unit": "mm",
+          "description": "Working height (clamped to your Z max)"
+        },
+        {
+          "name": "front_offset",
+          "default": 20,
+          "unit": "mm",
+          "description": "Distance from the front Y limit"
+        },
+        {
+          "name": "travel_speed",
+          "default": 6000,
+          "unit": "mm/min",
+          "description": "Park move speed"
+        }
+      ],
+      "risk_level": "medium",
+      "path": "registry/skills/maintenance-park"
+    },
+    {
+      "id": "status-report",
+      "name": "Status Report",
+      "version": "1.0.0",
+      "description": "One command prints a clean snapshot of temps, position, homing state, and speed factor to the console.",
+      "icon": "\ud83d\udccb",
+      "platform": "klipper",
+      "author": {
+        "name": "Skillbility",
+        "url": "https://github.com/MaxSikorski/skillbility"
+      },
+      "license": "MIT",
+      "categories": [
+        "diagnostics",
+        "quality-of-life"
+      ],
+      "tags": [
+        "status",
+        "temps",
+        "debug",
+        "console"
+      ],
+      "variables": [],
+      "risk_level": "low",
+      "path": "registry/skills/status-report"
+    }
+  ]
+}
