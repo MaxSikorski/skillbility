@@ -1,0 +1,32 @@
+{
+  "manifest_version": "0.1",
+  "id": "maintenance-park",
+  "name": "Maintenance Park",
+  "version": "1.0.0",
+  "description": "Moves the toolhead front-and-center at a comfortable height for nozzle swaps, cleaning, and inspection.",
+  "long_description": "Adds a `MAINTENANCE` command. Homes the printer if it isn't homed, then parks the toolhead centered in X, forward in Y, and at a configurable working height — no more jogging axes by hand before every nozzle change. Works on any printer because positions are computed from your machine's own axis limits.",
+  "icon": "🔧",
+  "platform": "klipper",
+  "runtime": { "type": "klipper-macro", "min_klipper": "0.11.0" },
+  "author": { "name": "Skillbility", "url": "https://github.com/MaxSikorski/skillbility" },
+  "license": "MIT",
+  "compatibility": {
+    "printers": ["*"],
+    "kinematics": ["cartesian", "corexy"],
+    "requires_sections": []
+  },
+  "variables": [
+    { "name": "park_z", "default": 100, "unit": "mm", "description": "Working height (clamped to your Z max)" },
+    { "name": "front_offset", "default": 20, "unit": "mm", "description": "Distance from the front Y limit" },
+    { "name": "travel_speed", "default": 6000, "unit": "mm/min", "description": "Park move speed" }
+  ],
+  "files": [
+    { "path": "maintenance-park.cfg", "dest": "maintenance-park.cfg" }
+  ],
+  "safety": {
+    "risk_level": "medium",
+    "notes": "Homes and moves all axes. Clear the bed before running."
+  },
+  "categories": ["maintenance", "quality-of-life"],
+  "tags": ["park", "nozzle", "service", "home"]
+}
