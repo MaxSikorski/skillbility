@@ -28,8 +28,6 @@ registry/           the catalog: index.json + skills/<id>/ (skill.json + payload
 ```
 
 ## Notes
-- Risk colors are the one sanctioned exception to the "no color" rule — quiet,
-  muted only (see the project `CLAUDE.md`).
 - The "Connect your printer" command points at the one-repo URL
   (`MaxSikorski/skillbility`) and goes live once the registry is published.
 - Nothing here has been run against a real printer yet.
