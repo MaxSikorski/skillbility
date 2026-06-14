@@ -1,0 +1,32 @@
+name: Build registry index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "registry/skills/**"
+      - "tools/build_index.py"
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build index.json
+        run: python3 tools/build_index.py
+
+      - name: Commit updated index
+        run: |
+          git config user.name "skillbility-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add registry/index.json
+          git diff --cached --quiet || git commit -m "chore: rebuild registry index"
+          git push
