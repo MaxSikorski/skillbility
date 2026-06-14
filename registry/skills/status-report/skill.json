@@ -1,0 +1,28 @@
+{
+  "manifest_version": "0.1",
+  "id": "status-report",
+  "name": "Status Report",
+  "version": "1.0.0",
+  "description": "One command prints a clean snapshot of temps, position, homing state, and speed factor to the console.",
+  "long_description": "Adds a `STATUS_REPORT` command that prints hotend and bed temperatures with targets, toolhead position, which axes are homed, current speed and flow factors, and print state — all in one tidy console block. Zero motion, zero heat: a safe first install to verify your Skillbility setup works.",
+  "icon": "📋",
+  "platform": "klipper",
+  "runtime": { "type": "klipper-macro", "min_klipper": "0.11.0" },
+  "author": { "name": "Skillbility", "url": "https://github.com/MaxSikorski/skillbility" },
+  "license": "MIT",
+  "compatibility": {
+    "printers": ["*"],
+    "kinematics": ["cartesian", "corexy", "delta"],
+    "requires_sections": []
+  },
+  "variables": [],
+  "files": [
+    { "path": "status-report.cfg", "dest": "status-report.cfg" }
+  ],
+  "safety": {
+    "risk_level": "low",
+    "notes": "Read-only. No motion, no heaters."
+  },
+  "categories": ["diagnostics", "quality-of-life"],
+  "tags": ["status", "temps", "debug", "console"]
+}
